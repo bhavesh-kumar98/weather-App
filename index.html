@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./src/style/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b6500bc2ee.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- main card -->
+  <div class="card">
+    <!-- Start search container -->
+    <div class="search-con">
+      <input id="search" type="text" name="loc" class="search-bar" placeholder="Enter the city name.">
+      <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass-location g-icon"></i></button>
+      <button class="btn" id="gpsBtn"><i class="fa-solid fa-location-crosshairs g-icon"></i></i></button>
+      <!-- GPS icon button -->
+    </div>
+    <div class="error">
+      <p></p>
+    </div>
+    <!-- /End search container -->
+    <!-- Start weather -->
+    <div class="weather">
+      <img src="https://openweathermap.org/img/wn/01d@4x.png" alt="weather-icon" class="weather-icon">
+      <h4 id="desc"></h4>
+      <h4 id="status"></h4>
+      <h1 class="temp"></h1>
+      <h2 class="city"></h2>
+      <div class="details">
+        <div class="col">
+          <img class="detail-icon" src="./src/assets/humidity.png" alt="">
+          <div>
+            <p class="humidity"></p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="col">
+          <img class="detail-icon" src="./src/assets/wind.png" alt="">
+          <div>
+            <p class="wind"></p>
+            <p>Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /End weather -->
+  </div>
+  <!-- /End main card -->
+
+  <script src="./src/main.js">
+  </script>
+</body>
+
+</html>
