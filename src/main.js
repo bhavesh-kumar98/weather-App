@@ -60,7 +60,6 @@ async function weatherSearch() {
   if (city) {
     try {
       const weatherData = await fetchWeatherData(city);
-      console.log("gps", weatherData);
       displayWeatherData(weatherData);
     } catch (error) {
       displayError(error.message);
@@ -82,7 +81,6 @@ function getUserLocation() {
             latitude,
             longitude
           );
-          console.log("gps", weatherData);
           displayWeatherData(weatherData);
         } catch (error) {
           displayError("Error fetching weather data based on your location.");
